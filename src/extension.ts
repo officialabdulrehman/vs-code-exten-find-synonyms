@@ -15,13 +15,37 @@ export function activate(context: vscode.ExtensionContext) {
   // The commandId parameter must match the command field in package.json
   let disposable = vscode.commands.registerCommand('synonym-finder.helloWorld', () => {
     // The code you place here will be executed every time your command is executed
-  });
-  const editor = vscode.window.activeTextEditor;
+    const editor = vscode.window.activeTextEditor;
 
-  if (!editor) {
-    vscode.window.showErrorMessage(`No editor found`);
-    return
-  }
+    if (!editor) {
+      vscode.window.showErrorMessage(`No editor found`);
+      return
+    }
+
+    const snippet = new vscode.SnippetString(`const test = () => {
+  return "test"
+}
+`)
+
+    editor.insertSnippet(snippet)
+
+    // editor.options.lineNumbers = vscode.TextEditorLineNumbersStyle.Relative
+
+
+    /* 
+      input file path
+      read file
+      make them persist
+      execute command
+        quickpane
+        select file type
+      modal opens, type dynamic input
+      generate file
+    */
+
+
+  });
+
 
   context.subscriptions.push(disposable);
 }
