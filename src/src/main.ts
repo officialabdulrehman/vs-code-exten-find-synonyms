@@ -1,5 +1,7 @@
+import { StaticFileService } from "./services/files.service"
+
 export const main = (args: string[]) => {
-  args.forEach((title: string) => createFiles(title))
+  args.forEach((title: string) => new StaticFileService(title, true))
 }
 
 
