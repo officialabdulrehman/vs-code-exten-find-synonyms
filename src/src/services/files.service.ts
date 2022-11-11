@@ -21,11 +21,9 @@ export class StaticFileService implements StaticFileServiceI {
   private _router: templateI = null
 
 
-  constructor(rawTitle: string, autoCreate: boolean = true) {
+  constructor(title: string, autoCreate: boolean = true) {
 
-    this.throwIfInvalidTitle(rawTitle)
-
-    const title = rawTitle.toLowerCase()
+    this.throwIfInvalidTitle(title)
 
     this.setTitleSmall(title)
     this.setTitleCapital(title)

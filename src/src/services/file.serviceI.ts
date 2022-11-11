@@ -1,4 +1,5 @@
 export interface StaticFileServiceI {
+
   createDAO(title: string): void
 
   createDTO(title: string): void
@@ -8,4 +9,5 @@ export interface StaticFileServiceI {
   createService(title: string): void
 
   createRouter(title: string): void
+
 }

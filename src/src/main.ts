@@ -1,6 +1,7 @@
-import { StaticFileService } from "./services/files.service"
+import { StaticFileService } from "./services/files.service";
 
 export const main = (args: string[]) => {
+  console.log("In Main")
   args.forEach((title: string) => new StaticFileService(title, true))
 }
 
