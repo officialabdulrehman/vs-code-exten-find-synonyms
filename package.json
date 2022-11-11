@@ -10,14 +10,24 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:synonym-finder.helloWorld"
+    "onCommand:synonym-finder.snippetCreate",
+    "onCommand:synonym-finder.snippetSelect",
+    "onCommand:synonym-finder.snippetSelect"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "synonym-finder.helloWorld",
-        "title": "Find Synonyms"
+        "command": "synonym-finder.snippetCreate",
+        "title": "Snippet Create"
+      },
+      {
+        "command": "synonym-finder.snippetSelect",
+        "title": "Snippet Select"
+      },
+      {
+        "command": "synonym-finder.snippetSelect",
+        "title": "Snippet List"
       }
     ]
   },
